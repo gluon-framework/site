@@ -1,0 +1,30 @@
+.changelog-badge {
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+
+  display: inline-block;
+
+  padding: .3rem .4rem;
+
+  background: rgba(95, 135, 255, 0.37);
+  border: 1px dashed rgb(95, 135, 255);
+
+  border-radius: 6px;
+
+  margin-left: 10px;
+}
+
+.changelog-badge-header {
+  display: flex;
+  align-items: center;
+}
+
+.changelog-badge.new {
+  background: rgba(95, 135, 255, 0.4);
+  border-color: rgb(95, 135, 255);
+}
+
+.changelog-badge.improved {
+  background: rgba(255, 218, 95, 0.4);
+  border-color: rgb(255, 218, 95);
+}

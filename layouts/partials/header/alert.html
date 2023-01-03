@@ -1,0 +1,5 @@
+{{ if .IsHome }}
+  <div class="alert alert-primary text-lg-center" role="alert">
+    {{ .Site.Params.alertText | safeHTML }}
+  </div>
+{{ end }}

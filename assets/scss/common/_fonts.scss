@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap');
+
+h1, h2, h3, h4, h5,
+header {
+  font-family: "Inter";
+}
+
+.nav-item {
+  font-weight: 600;
+}
+
+.nav-link.active, .banner .nav a.active, .dropdown-menu-main .dropdown-item.active, .docs-link.active {
+  font-weight: 700 !important;
+}
+
+.navbar-brand {
+  position: relative;
+  top: -2px;
+}
+
+.navbar-brand > img + span {
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+nav {
+  align-items: baseline !important;
+}
