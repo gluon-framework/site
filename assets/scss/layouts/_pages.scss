@@ -62,3 +62,79 @@ p.meta {
 .page-link:hover {
   text-decoration: none;
 }
+
+@media (max-width: 1000px) {
+  .col-lg-8[style="float: left"] {
+    float: unset !important;
+  }
+
+  .col-lg-7[style="float: right"] {
+    margin-top: 36px;
+    margin-bottom: 100px;
+    float: unset !important;
+
+    width: calc(100% + var(--bs-gutter-x));
+    position: relative;
+    left: calc(var(--bs-gutter-x) * -0.5);
+  }
+}
+
+@media (max-width: 600px) {
+  nav > .nav-link {
+    display: none !important;
+  }
+
+  .nav {
+    flex-direction: row !important;
+  }
+
+  .nav-link {
+    padding-right: 0.5rem;
+  }
+
+  nav {
+    --bs-gutter-x: 24px !important;
+  }
+
+  .alert {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 600px) {
+  nav > .nav:nth-last-child(2) > :last-child {
+    display: none;
+  }
+}
+
+body {
+  padding-right: 0 !important;
+}
+
+.home nav hr {
+  display: none;
+}
+
+/* .home .offcanvas-body .flex-grow-1 {
+  position: absolute !important;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.offcanvas-body > .nav-link {
+  margin: 14px 0 0 0 !important;
+}
+
+.offcanvas-body > .nav:nth-last-child(2) {
+  justify-content: end;
+  height: calc(100vh - 61px - 100px - 32px - 3rem - 32px);
+} */
+
+.nav-link small {
+  display: none !important;
+}
+
+nav .position-relative, .nav:nth-last-child(2) {
+  position: relative;
+  top: -2px;
+}

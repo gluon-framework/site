@@ -106,7 +106,7 @@ button#doks-versions {
   }
 }
 
-.offcanvas .nav-link {
+.nav-link {
   color: $body-color;
 }
 
@@ -123,12 +123,12 @@ button#doks-versions {
   padding: 0.5rem 1.5rem 0.5rem 0;
 }
 
-.offcanvas .nav-link:hover,
-.offcanvas .nav-link:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: $link-color;
 }
 
-.offcanvas .nav-link.active {
+.nav-link.active {
   color: $link-color;
 }
 
@@ -146,7 +146,7 @@ button#doks-versions {
   border-image-slice: 1;
 }
 
-.offcanvas .header-bar {
+.header-bar {
   margin-bottom: -4px;
 }
 
