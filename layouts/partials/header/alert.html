@@ -3,3 +3,28 @@
     {{ .Site.Params.alertText | safeHTML }}
   </div>
 {{ end }}
+
+<script> (async () => {
+  const prettyAgo = (timestamp) => {
+    const intervals = [
+      { label: 'year', seconds: 31536000 },
+      { label: 'month', seconds: 2592000 },
+      { label: 'week', seconds: 604800 },
+      { label: 'day', seconds: 86400 },
+    ];
+
+    const seconds = Math.floor((Date.now() - timestamp) / 1000);
+    const interval = intervals.find(i => i.seconds <= seconds) ?? intervals[intervals.length - 1];
+    const count = Math.floor(seconds / interval.seconds);
+
+    const rtf = new Intl.RelativeTimeFormat("en", {
+      localeMatcher: 'best fit',
+      numeric: 'auto',
+      style: 'long'
+    });
+
+    return rtf.format(count * -1, interval.label);
+  };
+
+  release_when.textContent = prettyAgo(new Date('2023-01-03'));
+})();</script>
