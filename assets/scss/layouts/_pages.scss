@@ -73,9 +73,9 @@ p.meta {
     margin-bottom: 100px;
     float: unset !important;
 
-    width: calc(100% + var(--bs-gutter-x));
+    /* width: calc(100% + var(--bs-gutter-x));
     position: relative;
-    left: calc(var(--bs-gutter-x) * -0.5);
+    left: calc(var(--bs-gutter-x) * -0.5); */
   }
 }
 
