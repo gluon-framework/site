@@ -85,9 +85,13 @@ code.language-mermaid {
   margin-bottom: 32px;
 }
 
-.glow pre {
+.glow pre, .glow p {
   margin: 0;
   font-size: 0.8rem;
+}
+
+.glow img {
+  border-radius: 0.375rem;
 }
 
 .col-lg-8 > h2 {
@@ -105,4 +109,25 @@ code.language-mermaid {
 
 .filename + pre > code {
   border-radius: 0;
+}
+
+.glow.rainbow {
+  animation: 16s glow-rainbow linear infinite;
+}
+
+
+@property --glow-hue {
+  syntax: '<number>'; /* <- defined as type number for the transition to work */
+  initial-value: 0;
+  inherits: false;
+}
+
+@keyframes glow-rainbow {
+  from {
+    --glow-hue: 0;
+  }
+
+  to {
+    --glow-hue: 260;
+  }
 }

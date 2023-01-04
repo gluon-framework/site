@@ -119,3 +119,19 @@ Window.idle.wake(); // Wake it up again
 </div>
 
 <div style="margin-bottom: 48px; clear: both"></div>
+
+<div class="glow rainbow">
+
+![Screenshot of a Gluon Hello World app showing versions with 2 windows, one using Chrome Canary and another using Firefox Nightly.](/gluon_dual.png)
+
+</div>
+
+<script>
+  // swap to smaller image with just one window if small screen
+ if (window.innerWidth < 800) {
+  document.querySelector('.img-fluid').src = '/gluon_chrome.png';
+  document.querySelector('.img-fluid').alt = 'Screenshot of a Gluon Hello World app showing versions, using Chrome.';
+ }
+</script>
+
+<div style="margin-bottom: 48px; clear: both"></div>
