@@ -12,6 +12,7 @@
   border-radius: 6px;
 
   margin-left: 10px;
+  vertical-align: middle;
 }
 
 .changelog-badge-header {
@@ -27,4 +28,8 @@
 .changelog-badge.improved {
   background: rgba(255, 218, 95, 0.4);
   border-color: rgb(255, 218, 95);
+}
+
+.changelog-badge.experimental {
+
 }
