@@ -73,13 +73,12 @@ code.language-mermaid {
 
   font-family: sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 0.875rem;
-  border-radius: 0.375rem;
 
   border-radius: 0.375rem 0.375rem 0 0;
 }
 
 .glow {
-  border-radius: 4px;
+  border-radius: 0.375rem;
   border: 1px solid hsl(var(--glow-hue),60%,70%);
   box-shadow: 0 3.5px 13.8px hsla(var(--glow-hue), 60%, 70%,.07),0 8.3px 33.3px hsla(var(--glow-hue), 60%, 70%,.101),0 15.7px 62.6px hsla(var(--glow-hue), 60%, 70%,.125),0 27.9px 111.7px hsla(var(--glow-hue), 60%, 70%,.149),0 52.2px 208.9px hsla(var(--glow-hue), 60%, 70%,.18),0 125px 500px hsla(var(--glow-hue), 60%, 70%,.25);
 
