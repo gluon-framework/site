@@ -22,6 +22,10 @@ $navbar-dark-active-color:          $link-color-dark;
 
 /** Theme styles */
 
+[data-dark-mode] {
+  color-scheme: dark; /* Uses dark scrollbar */
+}
+
 [data-dark-mode] body {
   background: $body-bg-dark;
   color: $body-color-dark;
