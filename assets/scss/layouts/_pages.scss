@@ -68,9 +68,9 @@ p.meta {
     float: unset !important;
   }
 
-  .col-lg-14 .col-lg-7 {
+  .col-lg-14 .col-lg-7, .glow.rainbow {
     margin-top: 36px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     float: unset !important;
 
     width: calc(100% + var(--bs-gutter-x) * 2);
