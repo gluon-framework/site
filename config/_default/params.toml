@@ -4,13 +4,13 @@
 title = "Gluon"
 titleSeparator = "-"
 titleAddition = "Home"
-description = "Develop desktop apps from websites, using system installed browsers and NodeJS"
+description = "Develop desktop apps from websites, using system installed browsers and NodeJS."
 
 ## Documentation
 docsVersion = "0.9.0"
 
 ## Open Graph
-images = ["gluon_dual.png"]
+images = ["gluon_chrome.png"]
 ogLocale = "en_US"
 domainTLD = "gluonjs.dev"
 titleHome = "Gluon"

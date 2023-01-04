@@ -1,7 +1,7 @@
 ---
 title : "Gluon"
-description: "A framework for creating desktop apps from websites, using system installed browsers and NodeJS"
-lead: "Develop desktop apps from websites, using system installed browsers and NodeJS"
+description: "A framework for creating desktop apps from websites, using system installed browsers and NodeJS."
+lead: "Develop desktop apps from websites, using system installed browsers and NodeJS."
 date: 2020-10-06T08:47:36+00:00
 lastmod: 2020-10-06T08:47:36+00:00
 draft: false
