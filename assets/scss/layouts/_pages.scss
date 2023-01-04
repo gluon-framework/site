@@ -64,18 +64,17 @@ p.meta {
 }
 
 @media (max-width: 1000px) {
-  .col-lg-8[style="float: left"] {
+  .col-lg-14 .col-lg-8 {
     float: unset !important;
   }
 
-  .col-lg-7[style="float: right"] {
+  .col-lg-14 .col-lg-7 {
     margin-top: 36px;
     margin-bottom: 100px;
     float: unset !important;
 
-    position: relative;
-    left: calc(var(--bs-gutter-x) * 0.5);
-    width: calc(100vw - var(--bs-gutter-x));
+    width: calc(100% + var(--bs-gutter-x) * 2);
+    transform: translateX(calc(var(--bs-gutter-x) * -1));
   }
 }
 
@@ -98,6 +97,10 @@ p.meta {
 
   .alert {
     font-size: 0.9rem;
+  }
+
+  .container-fluid .container {
+    --bs-gutter-x: 24px;
   }
 }
 
