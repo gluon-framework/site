@@ -79,7 +79,7 @@ reply // { different: 'data', original: 'data' }
 
 <div class="col-lg-8" style="float: left">
 
-## Idle API
+{{< changelog-header-h2 "experimental" "Idle API" >}}
 
 The Idle API is a unique feature to Gluon, allowing you to "hibernate" or "sleep" Gluon windows to save system resources.
 
