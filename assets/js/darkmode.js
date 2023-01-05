@@ -2,7 +2,7 @@ const mode = document.getElementById('mode');
 
 if (mode !== null) {
 
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => { return;
 
     if (event.matches) {
 
