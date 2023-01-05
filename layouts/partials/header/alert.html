@@ -11,6 +11,9 @@
       { label: 'month', seconds: 2592000 },
       { label: 'week', seconds: 604800 },
       { label: 'day', seconds: 86400 },
+      { label: 'hour', seconds: 3600 },
+      { label: 'minute', seconds: 60 },
+      { label: 'second', seconds: 1 }
     ];
 
     const seconds = Math.floor((Date.now() - timestamp) / 1000);
@@ -26,5 +29,5 @@
     return rtf.format(count * -1, interval.label);
   };
 
-  release_when.textContent = prettyAgo(new Date('2023-01-05'));
+  release_when.textContent = prettyAgo(new Date('2023-01-05T22:30:00'));
 })();</script>
