@@ -26,7 +26,7 @@ Opening a Window in Gluon is as simple as one function call, with more options a
 ```js
 import * as Gluon from '@gluon-framework/gluon';
 
-const Window = await Gluon.open('https://example.com');
+const Window = await Gluon.open('https://gluonjs.org');
 ```
 
 </div>
@@ -53,7 +53,7 @@ Gluon has an easy but powerful asynchronous IPC API, which is also near-identica
 ```js
 // In your Node backend
 import * as Gluon from '@gluon-framework/gluon';
-const Window = await Gluon.open(/* ... */);
+const Window = await Gluon.open('https://gluonjs.org');
 
 Window.ipc.on('my type', data => { // { more: 'data' }
   return { different: 'data', original: data.more };
@@ -99,17 +99,17 @@ You can either hibernate, sleep, and wake up manually with the API, or use autom
 import * as Gluon from '@gluon-framework/gluon';
 const Window = await Gluon.open('https://example.com');
 
-const sleep = sec => new Promise(resolve => setTimeout(resolve, sec * 1000));
-await sleep(5); // Wait for the window to fully load
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+await sleep(5000); // Wait for the window to fully load
 
 Window.idle.hibernate(); // Hibernate the window
-await sleep(5);
+await sleep(5000);
 
 Window.idle.wake(); // Wake up the window
-await sleep(5);
+await sleep(5000);
 
 Window.idle.sleep(); // Put the window to sleep
-await sleep(5);
+await sleep(5000);
 
 Window.idle.wake(); // Wake it up again
 ```
