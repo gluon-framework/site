@@ -77,7 +77,7 @@ const Window = await Gluon.open('https://gluonjs.org');
 
 // Not dangerous as FS functions are no longer exposed, much better.
 import { readFile } from 'fs/promises';
-Window.ipc.expose('getConfig', async () => JSON.parse(await readFile('config.json', 'utf8')));
+Window.ipc.getConfig = async () => JSON.parse(await readFile('config.json', 'utf8'));
 ```
 
 </div>
