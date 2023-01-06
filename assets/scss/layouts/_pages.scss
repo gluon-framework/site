@@ -145,3 +145,8 @@ nav .position-relative, .nav:nth-last-child(2) {
   position: relative;
   top: -2px;
 }
+
+h1 > code, h2 > code, h3 > code, h4 > code {
+  font-size: unset;
+  font-weight: unset;
+}
