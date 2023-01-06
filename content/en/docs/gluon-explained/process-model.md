@@ -30,7 +30,7 @@ Gluon's documentation will strongly encourage exposing developer's own functions
 
 #### Dangerous example
 
-Using IPC this way is dangerous as it allows the web frontend to make arbitary file reads.
+Using IPC this way is dangerous as it allows the web frontend to make arbitary file reads. Even if you control your website entirely, you still should never really use this approach.
 
 <div class="glow" style="--glow-hue: 320">
 <div class="filename">dangerous_node.js</div>
@@ -65,7 +65,7 @@ const config = JSON.parse(await Gluon.ipc.readFile('config.json'));
 
 #### Recommended example
 
-Using dedicated exposed functions per task is much safer as the web frontend can only perform expected/planned operations.
+Using dedicated exposed functions per task is much safer, as the web frontend can only perform expected operations.
 
 <div class="glow" style="--glow-hue: 320">
 <div class="filename">recommended_node.js</div>
