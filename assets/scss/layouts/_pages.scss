@@ -137,6 +137,10 @@ body {
   display: none !important;
 }
 
+h2 small {
+  font-size: 0.7em;
+}
+
 nav .position-relative, .nav:nth-last-child(2) {
   position: relative;
   top: -2px;
