@@ -13,4 +13,49 @@ weight: 302
 toc: true
 ---
 
-{{< alert icon="🚧" text="These docs are under construction." />}}
+## `eval(expression)`
+Evaluate JS in the Web frontend and return the result.
+
+### Arguments
+
+#### Expression
+JS to evaluate, either as a function or string.
+
+### Examples
+
+```js
+// Get the current url of the document
+const currentUrl = await Window.page.eval(`location.href`);
+```
+
+<br>
+
+## `loaded`
+A Promise which is resolved when the page loads (like `window.onload`).
+
+### Examples
+
+```js
+await Window.page.loaded;
+// Do stuff which requires page load
+```
+
+<br>
+
+## `title = newTitle`
+Set the current title of the page.
+
+### Examples
+
+```js
+Window.page.title = 'Custom title here';
+```
+
+## `title`
+Get the current title of the page.
+
+### Examples
+```js
+const currentTitle = Window.page.title;
+console.log('Current page title:', currentTitle);
+```
