@@ -43,6 +43,8 @@ IPC (Inter-Process Communication) allows you to communicate between your Node ba
 
 Gluon has an easy but powerful asynchronous IPC API, which is also near-identical in Node and the exposed Gluon web API to allow even easier and quicker development.
 
+<a href="/docs/gluon-explained/ipc/">Learn more about Gluon's IPC here.</a>
+
 </div>
 
 <div class="col-lg-7" style="float: right">
