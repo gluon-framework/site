@@ -13,4 +13,34 @@ weight: 303
 toc: true
 ---
 
-{{< alert icon="🚧" text="These docs are under construction." />}}
+## `minimize()`
+Minimize the browser window.
+
+### Examples
+
+```js
+Window.minimize(); // Minimize the window
+```
+
+<br>
+
+## `maximize()`
+Maximize the browser window. Does not show it, run `show()` additionally before to ensure it's visible / pops up.
+
+### Examples
+
+```js
+Window.maximize(); // Maximize the window
+```
+
+<br>
+
+## `show()`
+Show (unminimize) the browser window.
+
+### Examples
+
+```js
+Window.show(); // Show the window
+// Window.maximize() // Also maximise it after
+```
