@@ -55,9 +55,11 @@ Gluon has an easy but powerful asynchronous IPC API, which is also near-identica
 import * as Gluon from '@gluon-framework/gluon';
 const Window = await Gluon.open('https://gluonjs.org');
 
-Window.ipc.on('my type', data => { // { more: 'data' }
-  return { different: 'data', original: data.more };
-});
+import { readFile } from 'fs/promises';
+Window.ipc.getConfig = async () => {
+  // Read our own local config.json file as JSON, and return it
+  return JSON.parse(await readFile('config.json', 'utf8'));
+};
 ```
 
 </div>
@@ -67,8 +69,8 @@ Window.ipc.on('my type', data => { // { more: 'data' }
 
 ```js
 // In your website's JS
-const reply = await Gluon.ipc.send('my type', { more: 'data' });
-reply // { different: 'data', original: 'data' }
+const config = await Gluon.ipc.getConfig();
+// Contents of the config.json file now in website's JS
 ```
 
 </div>
