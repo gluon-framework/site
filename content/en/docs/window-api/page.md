@@ -14,7 +14,7 @@ toc: true
 ---
 
 ## `eval(expression)`
-Evaluate JS in the Web frontend and return the result.
+Evaluate JS in the Web frontend and return the result. If there's an error, it will return it like the window usually would (like `ReferenceError: notDefined is not defined`).
 
 ### Arguments
 
