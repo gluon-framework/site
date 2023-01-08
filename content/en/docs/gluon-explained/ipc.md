@@ -13,11 +13,11 @@ weight: 1
 toc: true
 ---
 
-IPC (Inter-Process Communication) is how your Node backend and Web frontend communicate with each other. There are 2 approaches to IPC you can use:
+IPC (Inter-Process Communication) is how your Node backend and Web frontend communicate with each other. There are 3 "sub-APIs" in IPC you can use:
 
-## Expose Functions <small>(Recommended)</small>
+## Expose Functions
 
-You can easily directly "expose" Node functions to the Web frontend, with a simple wrapper around IPC events built-in. This approach is recommended as it's easier to use and work with than having to deal with event listeners, etc.
+You can easily directly "expose" Node functions to the Web frontend, with a simple wrapper around IPC events built-in. Exposed functions are always async (due to using IPC internally).
 
 <div class="glow" style="--glow-hue: 320">
 <div class="filename">node.js</div>
@@ -27,9 +27,16 @@ You can easily directly "expose" Node functions to the Web frontend, with a simp
 import * as Gluon from '@gluon-framework/gluon';
 const Window = await Gluon.open('https://gluonjs.org');
 
-// Expose our own function to read a config JSON file.
-import { readFile } from 'fs/promises';
-Window.ipc.getConfig = async () => JSON.parse(await readFile('config.json', 'utf8'));
+// Expose our own function to write messages to a log file
+import { writeFile } from 'fs/promises';
+
+let log = '';
+Window.ipc.log = async msg => {
+  log += msg; // Add to log
+  return await writeFile('app.log', log) // Write to log file
+    .catch(() => false) // Return false on error
+    .then(() => true); // Return true on success
+};
 ```
 
 </div>
@@ -43,7 +50,45 @@ Window.ipc.getConfig = async () => JSON.parse(await readFile('config.json', 'utf
 // In your website's JS
 
 // Get the config from the Node backend.
-const config = await Gluon.ipc.getConfig();
+const success = await Gluon.ipc.log('Message!');
+success // true
+```
+
+</div>
+
+<div style="margin-bottom: 60px"></div>
+
+## Store
+
+Easily store common data between the Node backend and Web frontend in both directions. Values must be JSON serializable, and re-set to update the value.
+
+<div class="glow" style="--glow-hue: 320">
+<div class="filename">node.js</div>
+
+```js
+// In your Node backend
+import * as Gluon from '@gluon-framework/gluon';
+const Window = await Gluon.open('https://gluonjs.org');
+
+// Store common config in IPC Store
+Window.ipc.store.config = {
+  env: 'production'
+};
+```
+
+</div>
+
+<div style="margin-bottom: 40px"></div>
+
+<div class="glow" style="--glow-hue: 220">
+<div class="filename">site.js</div>
+
+```js
+// In your website's JS
+
+// Get the config using IPC Store
+const { config } = Gluon.ipc.store;
+config.env // 'production'
 ```
 
 </div>
@@ -52,7 +97,7 @@ const config = await Gluon.ipc.getConfig();
 
 ## Events
 
-Gluon's IPC uses an asynchronous event-based system which you can also use. The same example above would look like this using events instead.
+Gluon's IPC uses an asynchronous event-based system which you can also use. **It's recommended you use other sub-APIs where appropriate instead of using Events**, as they are easier to use for specific uses. The same example above would look like this using events instead.
 
 <div class="glow" style="--glow-hue: 320">
 <div class="filename">node.js</div>
