@@ -43,6 +43,14 @@ IPC (Inter-Process Communication) allows you to communicate between your Node ba
 
 Gluon has an easy but powerful asynchronous IPC API, which is also near-identical in Node and the exposed Gluon web API to allow even easier and quicker development.
 
+It also has multiple versatile sub-APIs for doing common things, wrapping the base API so most developers won't need to use a needlessly complex event-based system:
+
+##### Expose
+Easily expose Node functions to Web.
+
+##### Store
+Share common data effortlessly between Node and Web both ways, like a regular Object.
+
 <a href="/docs/gluon-explained/ipc/">Learn more about Gluon's IPC here.</a>
 
 </div>
@@ -57,10 +65,16 @@ Gluon has an easy but powerful asynchronous IPC API, which is also near-identica
 import * as Gluon from '@gluon-framework/gluon';
 const Window = await Gluon.open('https://gluonjs.org');
 
-import { readFile } from 'fs/promises';
-Window.ipc.getConfig = async () => {
-  // Read our own local config.json file as JSON, and return it
-  return JSON.parse(await readFile('config.json', 'utf8'));
+Window.ipc.store.config = {
+  env: 'production'
+};
+
+import { writeFile } from 'fs/promises';
+
+let log = '';
+Window.ipc.log = msg => { // Log data to a log file on disk
+  log += msg;
+  writeFile('app.log', log); // Write to log file
 };
 ```
 
