@@ -49,7 +49,7 @@ It also has multiple versatile sub-APIs for doing common things, wrapping the ba
 Easily expose Node functions to Web.
 
 ##### Store
-Share common data effortlessly between Node and Web both ways, like a regular Object.
+Share common data effortlessly between Node and Web both ways.
 
 <a href="/docs/gluon-explained/ipc/">Learn more about Gluon's IPC here.</a>
 
@@ -85,8 +85,12 @@ Window.ipc.log = msg => { // Log data to a log file on disk
 
 ```js
 // In your website's JS
-const config = await Gluon.ipc.getConfig();
-// Contents of the config.json file now in website's JS
+// Get data from IPC Store
+const { env } = await Gluon.ipc.store.config;
+env // 'production'
+
+// Call exposed IPC function
+Gluon.ipc.log('Stored to log file!');
 ```
 
 </div>
