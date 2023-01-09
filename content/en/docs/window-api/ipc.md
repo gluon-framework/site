@@ -108,7 +108,7 @@ Window.ipc.on('my type', data => {
 
 <br>
 
-## `ipc.send(type, data)`
+## `ipc.send(type, data?)`
 Send a given IPC type and data to the Web frontend.
 
 ### Arguments
@@ -117,7 +117,7 @@ Send a given IPC type and data to the Web frontend.
 Type of IPC event to send.
 
 #### Data
-Data to send with the IPC event.
+Data to send with the IPC event. Optional.
 
 ### Examples
 
