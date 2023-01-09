@@ -86,7 +86,7 @@ Window.ipc.log = msg => { // Log data to a log file on disk
 ```js
 // In your website's JS
 // Get data from IPC Store
-const { env } = await Gluon.ipc.store.config;
+const { env } = Gluon.ipc.store.config;
 env // 'production'
 
 // Call exposed IPC function
