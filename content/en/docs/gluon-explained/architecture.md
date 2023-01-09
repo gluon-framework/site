@@ -1,7 +1,7 @@
 ---
-title: "Process Model"
-description: "A deep dive into Gluon's process model."
-lead: "A deep dive into Gluon's process model."
+title: "Architecture"
+description: "A deep dive into Gluon's architecture."
+lead: "A deep dive into Gluon's architecture."
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
 draft: false
@@ -15,7 +15,7 @@ toc: true
 
 ### Overview
 
-Gluon's process model is simple:
+Gluon's architecture is relatively simple:
 - Node backend (Node script/app managing the Window)
 - Web frontend (browser window)
 
