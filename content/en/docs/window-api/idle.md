@@ -58,11 +58,15 @@ Whether to enable or disable automatic idle management (true/false).
 
 #### Options
 Object of options, all optional including Object itself:
-- `timeMinimizedToHibernate`: How long the window should be minimized before hibernating, in seconds.
+- `timeMinimizedToHibernate`: How long the window should be minimized before hibernating, in seconds. Defaults to 10.
 
 ### Examples
 
 ```js
 Window.idle.auto(true); // Enable automatic idle management
 Window.idle.auto(false); // Disable automatic idle management
+
+Window.idle.auto(true, { // Enable and change options:
+  timeMinimizedToHibernate: 30 // Be minimized for 30s before hibernating automatically
+});
 ```
