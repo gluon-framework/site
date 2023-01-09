@@ -9,7 +9,7 @@ images: []
 menu:
   docs:
     parent: "gluon-explained"
-weight: 100
+weight: 102
 toc: true
 ---
 
@@ -44,4 +44,4 @@ await Window.page.title; // Get current page title
 Window.page.title = 'new title'; // Set page title
 ```
 
-Whilst this may be confusing for some to begin with, we believe this unique approach benefits developers in the end. There are also often alternative functions as well in some APIs where it may be more confusing, although not encouraged.
+Whilst this may be confusing for some to begin with, we believe this unique approach benefits developers in the end. There are also often alternative functions as well in some APIs where it may be more confusing, although not actively encouraged.
