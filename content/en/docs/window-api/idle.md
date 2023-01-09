@@ -20,7 +20,7 @@ document.querySelector('.col-xl-3').classList.add('col-xl-4'); // Make table of 
 {{< alert icon="🧪" text="This API is experimental and may not behave as expected." />}}
 
 ## `hibernate()`
-Put the window into hibernation.
+Put the window into hibernation. Only supported on Windows, will automatically use `sleep()` as a fallback instead on other platforms.
 
 ### Examples
 
