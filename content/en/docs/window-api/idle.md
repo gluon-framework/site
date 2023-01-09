@@ -13,6 +13,10 @@ weight: 309
 toc: true
 ---
 
+<script>
+document.querySelector('.col-xl-3').classList.add('col-xl-4'); // Make table of contents wider
+</script>
+
 {{< alert icon="🧪" text="This API is experimental and may not behave as expected." />}}
 
 ## `hibernate()`
