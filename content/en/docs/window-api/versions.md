@@ -48,7 +48,7 @@ Window.versions.engine
 ## `jsEngine`
 Version information about the browser's JS engine (V8/SpiderMonkey) in use.
 
-{{< alert icon="⚠" text="Firefox incorrectly reports 1.8.5 always as the SpiderMonkey version. <a target=\"_blank\" rel=\"noopener\" href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=1809051\">Relevant bug report</a>." />}}
+{{< alert icon="⚠" text="Firefox <110 incorrectly reports 1.8.5 always as the SpiderMonkey version. <a target=\"_blank\" rel=\"noopener\" href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=1809051\">Relevant bug report</a>." />}}
 
 ### Examples
 
