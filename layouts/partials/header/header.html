@@ -67,6 +67,20 @@
           {{ end -}}
         </ul>
 
+        {{ if eq .Site.Params.options.docsVersioning true -}}
+        <hr class="text-black-50 my-4 d-lg-none">
+        <div class="dropdown">
+          <button class="btn btn-doks-light dropdown-toggle" id="doks-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" aria-label="Toggle version menu">
+            v{{ .Site.Params.docsVersion }}
+            <span class="dropdown-caret"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-lg-end me-lg-2 shadow rounded border-0" aria-labelledby="doks-versions">
+            <li><a class="dropdown-item {{ if eq .Site.Params.docsVersion "0.11" }}current disabled{{ end }}" aria-current="true" href="/docs{{ if in .RelPermalink "/docs/" }}{{ replace .RelPermalink "/docs" "" }}{{ else }}/guide/introduction{{ end }}">Latest (v0.11)</a></li>
+            <li><a class="dropdown-item {{ if eq .Site.Params.docsVersion "0.12" }}current disabled{{ end }}" href="/docs/0.12{{ if in .RelPermalink "/docs/" }}{{ replace .RelPermalink "/docs" "" }}{{ else }}/guide/introduction{{ end }}">Alpha (v0.12)</a></li>
+          </ul>
+        </div>
+        {{ end -}}
+
         {{- $showFlexSearch := .Site.Params.options.flexSearch }}
         {{- if $showFlexSearch }}
         {{- if and (isset .Site.Params.options "searchsectionsshow") (not (eq .Site.Params.options.searchSectionsShow "ALL")) }}
@@ -150,24 +164,6 @@
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="/docs/contributing/how-to-contribute/">Help Translate</a></li>
               -->
-          </ul>
-        </div>
-        {{ end -}}
-
-        {{ if eq .Site.Params.options.docsVersioning true -}}
-        <hr class="text-black-50 my-4 d-lg-none">
-        <div class="dropdown">
-          <button class="btn btn-doks-light dropdown-toggle" id="doks-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" aria-label="Toggle version menu">
-            <span class="d-none">Doks</span> v{{ .Site.Params.docsVersion }}
-            <span class="dropdown-caret"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-lg-end me-lg-2 shadow rounded border-0" aria-labelledby="doks-versions">
-            <li><a class="dropdown-item current" aria-current="true" href="/docs/{{ .Site.Params.docsVersion }}/prologue/introduction/">Latest ({{ .Site.Params.docsVersion }}.x)</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/docs/0.2/prologue/introduction/">v0.2.x</a></li>
-            <li><a class="dropdown-item" href="/docs/0.1/prologue/introduction/">v0.1.x</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/docs/versions/">All versions</a></li>
           </ul>
         </div>
         {{ end -}}
