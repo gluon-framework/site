@@ -7,7 +7,7 @@ titleAddition = "Home"
 description = "Develop desktop apps from websites, using system installed browsers and NodeJS."
 
 ## Documentation
-docsVersion = "0.11"
+docsVersion = "0.12"
 
 ## Open Graph
 images = ["gluon_chrome.png"]
