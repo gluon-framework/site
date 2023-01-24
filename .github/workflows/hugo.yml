@@ -38,13 +38,13 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Install Dart Sass Embedded
         run: sudo snap install dart-sass-embedded
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v2
       - name: Checkout
         uses: actions/checkout@v3
         with:
           submodules: recursive
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v2
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build with Hugo
@@ -53,13 +53,21 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          git checkout 0.11
-          npm ci
           hugo
           cp -rf ./public /tmp/final
-
-          git checkout 0.12
-          npm ci
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          ref: 0.12
+      - name: Install Node.js dependencies
+        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: Build with Hugo
+        env:
+          # For maximum backward compatibility with Hugo modules
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
           hugo
           cp -rf ./public/docs /tmp/final/docs/0.12
 
@@ -67,7 +75,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./public
+          path: /tmp/final
 
   # Deployment job
   deploy:
