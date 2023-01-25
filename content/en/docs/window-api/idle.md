@@ -21,7 +21,7 @@ document.querySelector('.col-xl-3').classList.add('col-xl-4'); // Make table of 
 {{< alert icon="⚠" text="This API is currently Chromium only." />}}
 
 ## `hibernate()`
-Put the window into hibernation. Only supported on Windows, will automatically use `sleep()` as a fallback instead on other platforms.
+Put the window into hibernation. This kills the internal browser processes to save the most resources. The page state is lost (as if refreshed).
 
 ### Examples
 
@@ -32,12 +32,23 @@ Window.idle.hibernate(); // Hibernate the window
 <br>
 
 ## `sleep()`
-Put the window to sleep.
+Put the window to sleep. This switches to a screenshot of the window instead of the actual window running. The page state is lost (as if refreshed).
 
 ### Examples
 
 ```js
 Window.idle.sleep(); // Put the window to sleep
+```
+
+<br>
+
+## `freeze()`
+Freeze the window. Halts most execution and background work. The page state is kept when woken (as if nothing happened). Unfreeze using `wake()`.
+
+### Examples
+
+```js
+Window.idle.freeze(); // Freeze the window
 ```
 
 <br>
