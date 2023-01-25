@@ -42,20 +42,25 @@ await Window.page.loaded;
 
 <br>
 
-## `title = newTitle`
-Set the current title of the page.
-
-### Examples
-
-```js
-Window.page.title = 'Custom title here';
-```
-
-## `title`
+## `title()`
 Get the current title of the page.
 
 ### Examples
 ```js
-const currentTitle = Window.page.title;
+const currentTitle = await Window.page.title();
 console.log('Current page title:', currentTitle);
+```
+
+## `title(newTitle)`
+Set the title of the page.
+
+### Arguments
+
+#### New title
+The new title to set.
+
+### Examples
+
+```js
+await Window.page.title('Custom title here');
 ```
