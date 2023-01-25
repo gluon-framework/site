@@ -13,8 +13,6 @@ weight: 200
 toc: true
 ---
 
-{{< alert icon="🚧" text="These docs are under construction." />}}
-
 `Gluon.open` allows you to easily open a new Gluon window.
 
 ## Arguments
