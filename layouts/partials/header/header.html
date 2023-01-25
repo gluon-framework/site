@@ -67,7 +67,7 @@
           {{ end -}}
         </ul>
 
-        {{ if eq .Site.Params.options.docsVersioning true -}}
+        {{ if in .RelPermalink "/docs/" -}}
         <hr class="text-black-50 my-4 d-lg-none">
         <div class="dropdown">
           <button class="btn btn-doks-light dropdown-toggle" id="doks-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" aria-label="Toggle version menu">
