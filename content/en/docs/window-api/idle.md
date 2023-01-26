@@ -11,14 +11,12 @@ menu:
     parent: "gluon api"
 weight: 309
 toc: true
+chrome: true
+experimental: true
 ---
 
-<script>
-document.querySelector('.col-xl-3').classList.add('col-xl-4'); // Make table of contents wider
-</script>
-
-{{< alert icon="🧪" text="This API is experimental and may not behave as expected." />}}
-{{< alert icon="⚠" text="This API is currently Chromium only." />}}
+{{< alert icon="<div style=\"--size: 24px\" class=\"icon-experimental\"></div>" text="This API is experimental and may not behave as expected." />}}
+{{< alert icon="<div style=\"--size: 24px\" class=\"icon-chrome\"></div>" text="This API is currently Chromium only." />}}
 
 ## `hibernate()`
 Put the window into hibernation. This kills the internal browser processes to save the most resources. The page state is lost (as if refreshed).
