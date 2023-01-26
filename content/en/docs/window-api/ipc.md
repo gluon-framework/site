@@ -13,10 +13,6 @@ weight: 301
 toc: true
 ---
 
-<script>
-document.querySelector('.col-xl-3').classList.add('col-xl-4'); // Make table of contents wider
-</script>
-
 {{< alert icon="ℹ" text="<a href=\"/docs/gluon-explained/ipc/\">See the IPC page in Gluon Explained first for a rundown on what IPC is and does.</a>" />}}
 
 ## `ipc[key] = functionToExpose`

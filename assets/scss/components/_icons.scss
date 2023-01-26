@@ -1,0 +1,33 @@
+.icon-chrome, .icon-firefox, .icon-experimental {
+  --size: 16px;
+  background-color: currentColor;
+  vertical-align: top;
+  display: inline-block;
+  height: var(--size);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  width: var(--size);
+}
+
+.icon-chrome {
+  -webkit-mask-image: url(/chrome.svg);
+  mask-image: url(/chrome.svg);
+}
+.icon-firefox {
+  -webkit-mask-image: url(/firefox.svg);
+  mask-image: url(/firefox.svg);
+}
+.icon-experimental {
+  -webkit-mask-image: url(/experimental.svg);
+  mask-image: url(/experimental.svg);
+}
+
+body a.docs-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
