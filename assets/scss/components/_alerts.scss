@@ -10,6 +10,11 @@
 
 .docs main .alert {
   margin: 2rem -1.5rem;
+  margin-bottom: 0;
+}
+
+.alert + .alert {
+  margin-top: 0 !important;
 }
 
 .alert .alert-link {
