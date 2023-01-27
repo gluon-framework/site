@@ -16,6 +16,65 @@ experimental: true
 ---
 
 {{< alert icon="<div style=\"--size: 24px\" class=\"icon-experimental\"></div>" text="This API is experimental and may not behave as expected." />}}
-{{< alert icon="<div style=\"--size: 24px\" class=\"icon-chrome\"></div>" text="This API is currently Chromium only." />}}
+{{< alert icon="<div style=\"--size: 24px\" class=\"icon-chrome\"></div>" text="This API is Chromium only." />}}
 
-{{< alert icon="🚧" text="These docs are under construction." />}}
+## V8 Caching
+
+V8 allows extra caching of code compilation to help improve load time of the page. This API allows you to interface with V8's cache by building and loading caches with provided options, or automatically. This API is a work-in-progress and experimental, as it does not consider factors like being up to/out of date, etc. [See this V8 post for some more information on code caching.](https://v8.dev/blog/code-caching-for-devs)
+
+<br>
+
+## `build(options?)`
+
+Build a V8 Cache of the current Gluon Window to a JSON file.
+
+### Arguments
+
+#### Options
+
+By default the build will be as eager as possible. There are extra optional options you can use for building, provided as an object:
+- `eager` - Use eager compilation (default: true)
+- `includePreload` - Try to include preload scripts in the V8 Cache (default: true)
+- `reload` - Reload the page to force script recompilation in order to cache (default: true)
+- `path` - Path to save the V8 Cache to, recommended to leave as default (default: `v8Cache.json` in Gluon's browser data)
+- `urls` - URLs of scripts to compile (default: automatically generated from current page)
+
+### Examples
+
+```js
+Window.v8Cache.build();
+```
+
+<br>
+
+## `load(path?)`
+
+Load a V8 Cache from a JSON file (optional). Gluon will automatically try to load a V8 Cache in the default path if it exists.
+
+### Arguments
+
+#### Path
+Path of V8 Cache to load, defaults to `v8Cache.json` in Gluon's browser data.
+
+### Examples
+
+```js
+Window.v8Cache.load();
+```
+
+<br>
+
+## `exists(path)`
+
+Check a V8 Cache JSON file exists.
+
+### Arguments
+
+#### Path
+Path of V8 Cache JSON file to check.
+
+### Examples
+
+```js
+Window.v8Cache.exists('/path/to/v8Cache.json');
+```
