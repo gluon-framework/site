@@ -12,9 +12,9 @@ images: []
 
 <div class="col-lg-8" style="float: left">
 
-## Performance
+## Performant
 
-Gluon is one of the most performant frameworks out there.
+Gluon is not only versatile, but also one of the most performant frameworks out there. By looking into browser internals and using a curated set of flags, Gluon tries to squeeze out the most performance possible whilst also aiming to use less memory and resources.
 
 </div>
 
@@ -24,19 +24,19 @@ Gluon is one of the most performant frameworks out there.
 <span>Startup Time</span>
 <div>
 <span>Gluon</span>
-<div class="glow" style="--glow-hue: 320; width: calc((100% - 140px) * 0.1)">0.2s</div>
+<div class="glow" style="--glow-hue: 320; width: calc((100% - 140px) * 0.33)">0.4s</div>
 </div>
 <div>
 <span>Electron</span>
-<div style="width: calc((100% - 140px) * 0.15)">0.3s</div>
+<div style="width: calc((100% - 140px) * 0.41)">0.5s</div>
 </div>
 <div>
 <span>Tauri</span>
-<div style="width: calc((100% - 140px) * 0.5)">1s</div>
+<div style="width: calc((100% - 140px) * 0.75)">0.9s</div>
 </div>
 <div>
 <span>Neutralinojs</span>
-<div style="width: calc((100% - 140px) * 1)">2s</div>
+<div style="width: calc((100% - 140px) * 1)">1.2s</div>
 </div>
 </div>
 
