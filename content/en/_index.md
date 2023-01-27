@@ -12,6 +12,40 @@ images: []
 
 <div class="col-lg-8" style="float: left">
 
+## Performance
+
+Gluon is one of the most performant frameworks out there.
+
+</div>
+
+<div class="col-lg-7" style="float: right">
+
+<div class="chart">
+<span>Startup Time</span>
+<div>
+<span>Gluon</span>
+<div class="glow" style="--glow-hue: 320; width: calc((100% - 140px) * 0.1)">0.2s</div>
+</div>
+<div>
+<span>Electron</span>
+<div style="width: calc((100% - 140px) * 0.15)">0.3s</div>
+</div>
+<div>
+<span>Tauri</span>
+<div style="width: calc((100% - 140px) * 0.5)">1s</div>
+</div>
+<div>
+<span>Neutralinojs</span>
+<div style="width: calc((100% - 140px) * 1)">2s</div>
+</div>
+</div>
+
+</div>
+
+<div style="margin-bottom: 60px; clear: both"></div>
+
+<div class="col-lg-8" style="float: left">
+
 ## Open Window API
 
 Opening a Window in Gluon is as simple as one function call, with more options available if you need them like window size or loading extra code.
