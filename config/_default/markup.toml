@@ -20,7 +20,7 @@ defaultMarkdownHandler = "goldmark"
   lineNos = false
   lineNumbersInTable = true
   noClasses = false
-  style = "dracula"
+  style = "github-dark-dimmed"
   tabWidth = 4
 
 [tableOfContents]
