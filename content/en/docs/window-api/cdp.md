@@ -34,7 +34,7 @@ Whether to use the session id of the page or not, on by default. Set false for b
 
 <br>
 
-## `on(method, callback)`
+## `on(method, callback, once = false)`
 Hook into a specific CDP method being emitted. Returns a function to unhook (remove the listener).
 
 ### Arguments
@@ -44,3 +44,6 @@ Method of CDP event to hook into.
 
 #### Callback
 Callback function to run when the given method is emitted.
+
+#### Once
+Unhook once the callback is called the first time, off by default.
