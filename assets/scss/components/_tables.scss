@@ -3,3 +3,57 @@ table {
 
   margin: 3rem 0;
 }
+
+.chart {
+
+}
+
+.chart > span {
+  font-size: 1.4em;
+  font-weight: 900;
+}
+
+.chart > div {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.chart > div > span {
+  font-size: 1em;
+  line-height: 24px;
+  font-weight: 700;
+
+  display: inline-block;
+  width: 140px;
+}
+
+.chart small {
+  color: #a0a4a8;
+  font-size: 0.8em;
+}
+
+.chart > div > div {
+  max-width: calc(100% - 140px);
+  height: 24px;
+  border-radius: 6px;
+  background: #404448;
+
+  font-size: 0.8em;
+  line-height: 24px;
+  font-weight: 600;
+  text-align: left;
+  padding: 0 6px;
+  margin: 0;
+
+  display: inline-block;
+}
+
+.chart > div > div.glow {
+  background: hsl(var(--glow-hue), 60%, 70%);
+  /* box-shadow: 0 0 30px -2px hsl(var(--glow-hue), 60%, 70%); */
+  color: #000;
+
+  box-shadow: 0 0.875px 3.45px hsla(var(--glow-hue), 60%, 70%, 0.07), 0 2.075px 8.325px hsla(var(--glow-hue), 60%, 70%, 0.101), 0 3.925px 15.65px hsla(var(--glow-hue), 60%, 70%, 0.125), 0 6.975px 27.925px hsla(var(--glow-hue), 60%, 70%, 0.149), 0 13.05px 52.225px hsla(var(--glow-hue), 60%, 70%, 0.18), 0 31.25px 125px hsla(var(--glow-hue), 60%, 70%, 0.25);
+}
