@@ -31,16 +31,3 @@ Extra parameters of the CDP command to send.
 
 #### Use Session ID
 Whether to use the session id of the page or not, on by default. Set false for browser-level commands.
-
-<br>
-
-## `on(method, callback)`
-Hook into a specific CDP method being emitted. Returns a function to unhook (remove the listener).
-
-### Arguments
-
-#### Method
-Method of CDP event to hook into.
-
-#### Callback
-Callback function to run when the given method is emitted.
