@@ -466,7 +466,7 @@ button#doks-versions {
 }
 
 .dropdown-divider {
-  border-top: 1px dashed $gray-200;
+  border-top: 1px solid #404448;
 }
 
 .dropdown-item:hover {
@@ -475,6 +475,16 @@ button#doks-versions {
 
 .dropdown-item:active {
   color: inherit;
+}
+
+.dropdown-text {
+  color: #a0a4a8 !important;
+  font-size: 0.8rem;
+  cursor: default;
+}
+
+.dropdown-text:hover {
+  background: unset !important;
 }
 
 .social-link {
