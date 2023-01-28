@@ -75,8 +75,11 @@
             <span class="dropdown-caret"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
           </button>
           <ul class="dropdown-menu dropdown-menu-lg-end me-lg-2 shadow rounded border-0" aria-labelledby="doks-versions">
-            <li><a class="dropdown-item {{ if eq .Site.Params.docsVersion "0.11" }}current disabled{{ end }}" aria-current="true" href="/docs{{ if in .RelPermalink "/docs/" }}{{ replace .RelPermalink "/docs" "" }}{{ else }}/guide/introduction{{ end }}">Latest (v0.11)</a></li>
-            <li><a class="dropdown-item {{ if eq .Site.Params.docsVersion "0.12" }}current disabled{{ end }}" href="/docs/0.12{{ if in .RelPermalink "/docs/" }}{{ replace .RelPermalink "/docs" "" }}{{ else }}/guide/introduction{{ end }}">Alpha (v0.12)</a></li>
+            <li><a class="dropdown-item {{ if eq .Site.Params.docsVersion "0.12" }}current disabled{{ end }}" aria-current="true" href="/docs{{ if in .RelPermalink "/docs/" }}{{ replace .RelPermalink "/docs" "" }}{{ else }}/guide/introduction{{ end }}">Latest (v0.12)</a></li>
+            <li><a class="dropdown-item {{ if eq .Site.Params.docsVersion "0.13" }}current disabled{{ end }}" href="/docs/0.13{{ if in .RelPermalink "/docs/" }}{{ replace .RelPermalink "/docs" "" }}{{ else }}/guide/introduction{{ end }}">Alpha (v0.13)</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><span class="dropdown-item dropdown-text">Older</span></li>
+            <li><a class="dropdown-item {{ if eq .Site.Params.docsVersion "0.11" }}current disabled{{ end }}" aria-current="true" href="/docs/0.11{{ if in .RelPermalink "/docs/" }}{{ replace .RelPermalink "/docs" "" }}{{ else }}/guide/introduction{{ end }}">v0.11</a></li>
           </ul>
         </div>
         {{ end -}}
