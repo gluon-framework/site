@@ -29,7 +29,7 @@
           </ul>
         {{ else }}
           {{ $active := in $currentPage.RelPermalink .RelPermalink }}
-          <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Name }}{{ if .Params.experimental }}<div title="Experimental" class="icon-experimental"></div>{{ end }}{{ if .Params.chrome }}<div title="Chromium only" class="icon-chrome"></div>{{ end }}</a></li>
+          <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Name }}{{ if .Params.experimental }}<div title="Experimental" class="icon-box"><div class="icon-experimental"></div></div>{{ end }}{{ if .Params.chrome }}<div title="Chromium Only" class="icon-box gray"><div class="icon-chrome"></div></div>{{ end }}</a></li>
         {{ end }}
       {{ end }}
     </ul>

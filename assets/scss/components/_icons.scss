@@ -27,7 +27,23 @@
 }
 
 body a.docs-link {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  width: 90%;
+}
+
+body a.docs-link .icon-box {
+  height: 24px;
+  padding: 4px;
+  float: right;
+  margin-right: 6px;
+  border-radius: 6px;
+  background: rgba(95, 135, 255, 0.37);
+  color: #1d2d35 !important;
+}
+
+[data-dark-mode] body a.docs-link .icon-box {
+  color: #dee2e6 !important;
+}
+
+body a.docs-link .icon-box.gray {
+  background: rgba(120, 130, 140, 0.37);
 }
