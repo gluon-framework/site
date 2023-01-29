@@ -23,6 +23,7 @@ Existing frameworks either bundle Chromium (Electron) or use WebView2/WebKitGTK 
 ### Advantages over bundling
 
 - Tiny build sizes in comparison
+- Chromium version isn't coupled to build
 - More freedom/choice for users
 
 ### Advantages over WebView2
