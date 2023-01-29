@@ -57,3 +57,55 @@ table {
 
   box-shadow: 0 0.875px 3.45px hsla(var(--glow-hue), 60%, 70%, 0.07), 0 2.075px 8.325px hsla(var(--glow-hue), 60%, 70%, 0.101), 0 3.925px 15.65px hsla(var(--glow-hue), 60%, 70%, 0.125), 0 6.975px 27.925px hsla(var(--glow-hue), 60%, 70%, 0.149), 0 13.05px 52.225px hsla(var(--glow-hue), 60%, 70%, 0.18), 0 31.25px 125px hsla(var(--glow-hue), 60%, 70%, 0.25);
 }
+
+.cross-diagram {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cross-diagram span {
+  font-size: 1.4em;
+  font-weight: 900;
+  width: 120px;
+  text-align: right;
+}
+
+.cross-diagram > div {
+  display: flex;
+  width: 100%;
+
+  margin-top: 2px;
+  margin-bottom: 28px;
+  margin-left: 24px;
+
+  flex-grow: 1;
+  flex-basis: 50%;
+}
+
+.cross-diagram .icon-box {
+  width: calc(1.8rem + 0.4rem * 2);
+  height: calc(1.8rem + 0.4rem * 2);
+  padding: 0.4rem;
+
+  margin-right: 24px;
+}
+
+.cross-diagram .icon-box > div {
+  --icon-size: 1.8rem;
+}
+
+.cross-diagram .icon-windows,
+.cross-diagram .icon-mac,
+.cross-diagram .icon-linux,
+.cross-diagram .icon-firefox {
+
+}
+
+.cross-diagram .icon-box > div:nth-child(2) {
+  position: relative;
+  top: 12px;
+
+  --icon-size: 12px;
+  display: block;
+  margin: auto;
+}

@@ -15,8 +15,8 @@ chrome: true
 experimental: true
 ---
 
-{{< alert icon="<div style=\"--size: 24px\" class=\"icon-experimental\"></div>" text="This API is experimental and may not behave as expected." />}}
-{{< alert icon="<div style=\"--size: 24px\" class=\"icon-chrome\"></div>" text="This API is Chromium only." />}}
+{{< alert icon="<div style=\"--icon-size: 24px\" class=\"icon-experimental\"></div>" text="This API is experimental and may not behave as expected." />}}
+{{< alert icon="<div style=\"--icon-size: 24px\" class=\"icon-chrome\"></div>" text="This API is Chromium only." />}}
 
 ## V8 Caching
 
