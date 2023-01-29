@@ -42,6 +42,22 @@ await Window.page.loaded;
 
 <br>
 
+## `reload(ignoreCache = false)`
+Reload the page, optionally ignoring the cache (for this reload).
+
+### Arguments
+
+#### Ignore cache
+Optionally ignore the cache for this reload. Defaults to false.
+
+### Examples
+```js
+await Window.page.reload(); // Reload the page
+await Window.page.reload(true); // Reload the page and ignore the cache
+```
+
+<br>
+
 ## `title()`
 Get the current title of the page.
 
