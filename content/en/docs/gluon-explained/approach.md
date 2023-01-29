@@ -26,6 +26,7 @@ Gluon focuses on:
   - Deno/Bun support (WIP)
 
 
+<!--
 ### General API Structure
 
 **Instead** of using functions to get and set like:
@@ -45,3 +46,4 @@ Window.page.title = 'new title'; // Set page title
 ```
 
 Whilst this may be confusing for some to begin with, we believe this unique approach benefits developers in the end. There are also often alternative functions as well in some APIs where it may be more confusing, although not actively encouraged.
+-->
