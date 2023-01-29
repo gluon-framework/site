@@ -10,11 +10,47 @@ images: []
 
 <div style="margin-bottom: 60px; clear: both"></div>
 
+<div class="col-lg-10" style="float: left">
+
+## Cross-platform, Cross-browser, Cross-runtime
+
+Gluon supports Windows, Linux, and Mac, with most Chromium-based and Firefox-based system installed browsers supported. You can also use Node, Deno, or Bun as the JS Runtime powering your app (experimental).
+
+</div>
+
+<div class="col-lg-5" style="float: right">
+
+<div class="cross-diagram">
+<span>Platforms</span>
+<div>
+<div class="icon-box" title="Windows"><div class="icon-windows"></div></div>
+<div class="icon-box orange" title="Linux"><div class="icon-linux"></div></div>
+<div class="icon-box gray" title="Mac"><div class="icon-mac"></div><div title="Experimental" class="icon-experimental"></div></div>
+</div>
+<span>Runtimes</span>
+<div>
+<div class="icon-box" title="NodeJS" style="background: rgba(101, 184, 73, 0.37)"><div class="icon-node"></div></div>
+<div class="icon-box" title="Deno" style="background: rgba(18, 18, 75, 0.37)"><div class="icon-deno"></div><div title="Experimental" class="icon-experimental"></div></div>
+<div class="icon-box" title="Bun" style="background: rgba(251, 240, 223, 0.37)"><div class="icon-bun"></div><div title="Experimental" class="icon-experimental"></div></div>
+</div>
+<span>Browsers</span>
+<div>
+<div class="icon-box gray" title="Chromium-based" style="background: rgba(174, 203, 250, 0.37)"><div class="icon-chrome"></div></div>
+<div class="icon-box orange" title="Firefox-based" style="background: rgba(255, 67, 63, 0.37)"><div class="icon-firefox"></div><div title="Experimental" class="icon-experimental"></div></div>
+<div class="icon-box gray" title="Chromium-based" style="background: transparent"><div class="text-icon">+</div></div>
+</div>
+</div>
+
+</div>
+
+<div style="margin-bottom: 60px; clear: both"></div>
+
+
 <div class="col-lg-8" style="float: left">
 
 ## Performant
 
-Gluon is not only versatile, but also one of the most performant frameworks out there. By looking into browser internals and using a curated set of flags, Gluon tries to squeeze out the most performance possible whilst also aiming to use less memory and resources.
+Gluon is not only versatile, but also one of the fastest frameworks out there. By looking into browser internals and using a curated set of flags, Gluon tries to squeeze out the most performance possible whilst also aiming to use less memory and resources.
 
 </div>
 

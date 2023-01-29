@@ -1,5 +1,5 @@
-.icon-chrome, .icon-firefox, .icon-experimental {
-  --size: 16px;
+[class^="icon-"] {
+  --size: var(--icon-size, 16px);
   background-color: currentColor;
   vertical-align: top;
   display: inline-block;
@@ -13,6 +13,20 @@
   width: var(--size);
 }
 
+.text-icon {
+  --size: var(--icon-size, 16px);
+  vertical-align: top;
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+  text-align: center;
+  line-height: calc(var(--size) * 1.2);
+  font-size: calc(var(--size) * 1.2);
+  margin-top: calc(var(--size) * -0.1);
+  font-weight: 900;
+  cursor: default;
+}
+
 .icon-chrome {
   -webkit-mask-image: url(/chrome.svg);
   mask-image: url(/chrome.svg);
@@ -21,16 +35,50 @@
   -webkit-mask-image: url(/firefox.svg);
   mask-image: url(/firefox.svg);
 }
+
+.icon-windows {
+  -webkit-mask-image: url(/windows.svg);
+  mask-image: url(/windows.svg);
+}
+.icon-linux {
+  -webkit-mask-image: url(/linux.svg);
+  mask-image: url(/linux.svg);
+}
+.icon-mac {
+  -webkit-mask-image: url(/mac.svg);
+  mask-image: url(/mac.svg);
+}
+
+.icon-node {
+  -webkit-mask-image: url(/node.svg);
+  mask-image: url(/node.svg);
+}
+.icon-deno {
+  -webkit-mask-image: url(/deno.svg);
+  mask-image: url(/deno.svg);
+}
+.icon-bun {
+  -webkit-mask-image: url(/bun.svg);
+  mask-image: url(/bun.svg);
+}
+
 .icon-experimental {
   -webkit-mask-image: url(/experimental.svg);
   mask-image: url(/experimental.svg);
+}
+
+.icon-windows, .icon-mac, .icon-linux, .icon-firefox {
+  /* margin-left: calc(var(--size) * 0.05);
+  margin-top: calc(var(--size) * 0.05);
+  width: calc(var(--size) * 0.9);
+  height: calc(var(--size) * 0.9); */
 }
 
 body a.docs-link {
   width: 90%;
 }
 
-body a.docs-link .icon-box {
+.icon-box {
   height: 24px;
   padding: 4px;
   float: right;
@@ -40,10 +88,18 @@ body a.docs-link .icon-box {
   color: #1d2d35 !important;
 }
 
-[data-dark-mode] body a.docs-link .icon-box {
+[data-dark-mode] .icon-box {
   color: #dee2e6 !important;
 }
 
-body a.docs-link .icon-box.gray {
+.icon-box.gray {
   background: rgba(120, 130, 140, 0.37);
+}
+
+.icon-box.orange {
+  background: rgba(255, 99, 71, 0.37);
+}
+
+.icon-box.green {
+  background: rgba(101, 184, 73, 0.37);
 }

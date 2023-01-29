@@ -64,11 +64,11 @@ p.meta {
 }
 
 @media (max-width: 1000px) {
-  .col-lg-14 .col-lg-8 {
+  .col-lg-14 .col-lg-8, .col-lg-14 .col-lg-10 {
     float: unset !important;
   }
 
-  .col-lg-14 .col-lg-7, .glow.rainbow {
+  .col-lg-14 .col-lg-7, .glow.rainbow, .col-lg-14 .col-lg-5 {
     margin-top: 36px;
     margin-bottom: 80px;
     float: unset !important;

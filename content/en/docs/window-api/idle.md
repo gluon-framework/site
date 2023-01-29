@@ -15,8 +15,8 @@ chrome: true
 experimental: true
 ---
 
-{{< alert icon="<div style=\"--size: 24px\" class=\"icon-experimental\"></div>" text="This API is experimental and may not behave as expected." />}}
-{{< alert icon="<div style=\"--size: 24px\" class=\"icon-chrome\"></div>" text="This API is currently Chromium only." />}}
+{{< alert icon="<div style=\"--icon-size: 24px\" class=\"icon-experimental\"></div>" text="This API is experimental and may not behave as expected." />}}
+{{< alert icon="<div style=\"--icon-size: 24px\" class=\"icon-chrome\"></div>" text="This API is currently Chromium only." />}}
 
 ## `hibernate()`
 Put the window into hibernation. This kills the internal browser processes to save the most resources. The page state is lost (as if refreshed).
