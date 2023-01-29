@@ -14,7 +14,7 @@ images: []
 
 ## Cross-platform, Cross-browser, Cross-runtime
 
-Gluon supports Windows, Linux, and Mac, with most Chromium-based and Firefox-based system installed browsers supported. You can also use Node, Deno, or Bun as the JS Runtime powering your app (experimental).
+Gluon supports Windows, Linux, and Mac, with most Chromium-based and Firefox-based browsers supported. You can also use Node, Deno, or Bun as the JS Runtime powering your app (experimental).
 
 </div>
 
