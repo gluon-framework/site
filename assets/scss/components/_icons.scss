@@ -1,4 +1,4 @@
-[class^="icon-"] {
+[class^="icon-"]:not(.icon-box) {
   --size: var(--icon-size, 16px);
   background-color: currentColor;
   vertical-align: top;
