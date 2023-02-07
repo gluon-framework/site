@@ -21,6 +21,8 @@ toc: true
 - **HTTP is completely disabled** by default
 - **Redirects to other origins are disabled** by default
 
+Any options reducing security are actively warned against in terminal and documentation.
+
 <br>
 
 #### ❌ Dangerous example
