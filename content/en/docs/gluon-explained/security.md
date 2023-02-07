@@ -18,6 +18,8 @@ toc: true
 **Gluon is one of the most secure frameworks of its kind.** This is mostly because:
 - The browser/web process is **process isolated and sandboxed** from the JS backend, **always**.
 - There is **no way to simply expose NodeJS**, or *potentially dangerous* native APIs to the web at all (built-in), and doing anything of the sort is highly discouraged and warned against.
+- **HTTP is completely disabled** by default
+- **Redirects to other origins are disabled** by default
 
 <br>
 
