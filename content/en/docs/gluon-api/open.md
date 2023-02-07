@@ -25,8 +25,17 @@ The main argument to open is the URL of the website to open the window with.
 
 There are extra optional options you can use when opening a window, provided as an object:
 - `onLoad` - a function to evaluate in the website once it's loaded
-- `forceBrowser` - force Gluon to use the provided browser instead of automatically finding and using one (not recommended)
-
+- `forceBrowser` - force Gluon to use the provided browser instead of automatically finding and using one (not recommended), use `chrome`/`edge`/`firefox`/`firefox_nightly`/etc
+- `forceEngine` - force Gluon to only use the provided browser engine (`chromium`/`firefox`)
+- `windowSize` - size of the window to open as `[width, height]`
+- `allowHTTP` - opt-in to allowing HTTP (completely disabled by default), options:
+  - `false` - HTTP is completely disabled (default)
+  - `mixed` - Allow mixed content (but not as the window URL itself). Not recommended.
+  - `true` - HTTP is completely allowed. Not recommended.
+- `allowRedirects` - choose what redirects should be allowed (not ignored), options:
+  - `false` - No redirects are allowed
+  - `same-origin` - Only redirects to the same origin are allowed (default)
+  - `true` - All redirects are allowed. Not recommended.
 
 ## Examples
 
