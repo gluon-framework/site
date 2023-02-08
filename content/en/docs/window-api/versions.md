@@ -24,18 +24,25 @@ Version information about the product (browser) in use.
 
 ### Examples
 
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
+
 ```js
 Window.versions.product
 // Chrome example: { name: 'Chrome', version: '107.0.5304.107', major: 107 }
 // Firefox Nightly example: { name: 'Firefox Nightly', version: '110.0a1', major: 110 }
 ```
 
-<br>
+</div>
+<div style="margin-bottom: 60px"></div>s
 
 ## `engine`
 Version information about the browser engine (Chromium/Firefox) in use. Firefox is referred to as using the "firefox" engine rather than Gecko as forks are based on Firefox directly instead of just Gecko.
 
 ### Examples
+
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
 
 ```js
 Window.versions.engine
@@ -43,14 +50,16 @@ Window.versions.engine
 // Firefox Nightly example: { name: 'firefox', version: '110.0a1', major: 110 }
 ```
 
-<br>
+</div>
+<div style="margin-bottom: 60px"></div>
 
 ## `jsEngine`
 Version information about the browser's JS engine (V8/SpiderMonkey) in use.
 
-{{< alert icon="⚠" text="Firefox <110 incorrectly reports 1.8.5 always as the SpiderMonkey version. <a target=\"_blank\" rel=\"noopener\" href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=1809051\">Relevant bug report</a>." />}}
-
 ### Examples
+
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
 
 ```js
 Window.versions.jsEngine
@@ -58,4 +67,5 @@ Window.versions.jsEngine
 // Firefox Nightly example: { name: 'spidermonkey', version: '1.8.5', major: 1 }
 ```
 
-<br>
+</div>
+<div style="margin-bottom: 60px"></div>s

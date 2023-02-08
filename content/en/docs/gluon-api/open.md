@@ -41,13 +41,22 @@ There are extra optional options you can use when opening a window, provided as 
 
 Open a new Gluon window, loading `https://gluonjs.org`:
 
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
+
 ```js
 import * as Gluon from '@gluon-framework/gluon';
 
 const Window = await Gluon.open('https://gluonjs.org');
 ```
 
+</div>
+<div style="margin-bottom: 40px"></div>
+
 Open a new Gluon window, loading `https://gluonjs.org` and displaying an alert once loaded:
+
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
 
 ```js
 import * as Gluon from '@gluon-framework/gluon';
@@ -57,7 +66,13 @@ const Window = await Gluon.open('https://gluonjs.org', {
 });
 ```
 
+</div>
+<div style="margin-bottom: 40px"></div>
+
 Open a new Gluon window using Chrome Canary, loading `https://gluonjs.org`:
+
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
 
 ```js
 import * as Gluon from '@gluon-framework/gluon';
@@ -66,3 +81,6 @@ const Window = await Gluon.open('https://gluonjs.org', {
   forceBrowser: 'chrome_canary'
 });
 ```
+
+</div>
+<div style="margin-bottom: 40px"></div>

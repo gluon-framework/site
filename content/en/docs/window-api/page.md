@@ -23,24 +23,32 @@ JS to evaluate, either as a function or string.
 
 ### Examples
 
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
+
 ```js
 // Get the current url of the document
 const currentUrl = await Window.page.eval(`location.href`);
 ```
 
-<br>
+</div>
+<div style="margin-bottom: 60px"></div>
 
 ## `loaded`
 A Promise which is resolved when the page loads (like `window.onload`).
 
 ### Examples
 
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
+
 ```js
 await Window.page.loaded;
 // Do stuff which requires page load
 ```
 
-<br>
+</div>
+<div style="margin-bottom: 60px"></div>
 
 ## `reload(ignoreCache = false)`
 Reload the page, optionally ignoring the cache (for this reload).
@@ -51,21 +59,33 @@ Reload the page, optionally ignoring the cache (for this reload).
 Optionally ignore the cache for this reload. Defaults to false.
 
 ### Examples
+
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
+
 ```js
 await Window.page.reload(); // Reload the page
 await Window.page.reload(true); // Reload the page and ignore the cache
 ```
 
-<br>
+</div>
+<div style="margin-bottom: 60px"></div>
 
 ## `title()`
 Get the current title of the page.
 
 ### Examples
+
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
+
 ```js
 const currentTitle = await Window.page.title();
 console.log('Current page title:', currentTitle);
 ```
+
+</div>
+<div style="margin-bottom: 60px"></div>
 
 ## `title(newTitle)`
 Set the title of the page.
@@ -77,6 +97,12 @@ The new title to set.
 
 ### Examples
 
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
+
 ```js
 await Window.page.title('Custom title here');
 ```
+
+</div>
+<div style="margin-bottom: 60px"></div>

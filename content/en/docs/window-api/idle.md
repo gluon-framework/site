@@ -23,44 +23,60 @@ Put the window into hibernation. This kills the internal browser processes to sa
 
 ### Examples
 
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
+
 ```js
 Window.idle.hibernate(); // Hibernate the window
 ```
 
-<br>
+</div>
+<div style="margin-bottom: 60px"></div>
 
 ## `sleep()`
 Put the window to sleep. This switches to a screenshot of the window instead of the actual window running. The page state is lost (as if refreshed).
 
 ### Examples
 
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
+
 ```js
 Window.idle.sleep(); // Put the window to sleep
 ```
 
-<br>
+</div>
+<div style="margin-bottom: 60px"></div>
 
 ## `freeze()`
 Freeze the window. Halts most execution and background work. The page state is kept when woken (as if nothing happened). Unfreeze using `wake()`.
 
 ### Examples
 
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
+
 ```js
 Window.idle.freeze(); // Freeze the window
 ```
 
-<br>
+</div>
+<div style="margin-bottom: 60px"></div>
 
 ## `wake()`
 Wake up the window from hibernation or sleep.
 
 ### Examples
 
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
+
 ```js
 Window.idle.wake(); // Wake up the window
 ```
 
-<br>
+</div>
+<div style="margin-bottom: 60px"></div>
 
 ## `auto(enabled, options?)`
 Enable/disable automatic idle management (disabled by default), and manage it's options.
@@ -76,6 +92,9 @@ Object of options, all optional including Object itself:
 
 ### Examples
 
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
+
 ```js
 Window.idle.auto(true); // Enable automatic idle management
 Window.idle.auto(false); // Disable automatic idle management
@@ -84,3 +103,6 @@ Window.idle.auto(true, { // Enable and change options:
   timeMinimizedToHibernate: 30 // Be minimized for 30s before hibernating automatically
 });
 ```
+
+</div>
+<div style="margin-bottom: 60px"></div>

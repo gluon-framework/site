@@ -41,11 +41,15 @@ By default the build will be as eager as possible. There are extra optional opti
 
 ### Examples
 
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
+
 ```js
 Window.v8Cache.build();
 ```
 
-<br>
+</div>
+<div style="margin-bottom: 60px"></div>
 
 ## `load(path?)`
 
@@ -58,11 +62,15 @@ Path of V8 Cache to load, defaults to `v8Cache.json` in Gluon's browser data.
 
 ### Examples
 
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
+
 ```js
 Window.v8Cache.load();
 ```
 
-<br>
+</div>
+<div style="margin-bottom: 60px"></div>
 
 ## `exists(path)`
 
@@ -75,6 +83,12 @@ Path of V8 Cache JSON file to check.
 
 ### Examples
 
+<div class="glow" style="--glow-hue: 320">
+<div class="filename node">index.js</div>
+
 ```js
 Window.v8Cache.exists('/path/to/v8Cache.json');
 ```
+
+</div>
+<div style="margin-bottom: 60px"></div>

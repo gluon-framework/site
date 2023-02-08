@@ -20,10 +20,9 @@ IPC (Inter-Process Communication) is how your Node backend and Web frontend comm
 You can easily directly "expose" Node functions to the Web frontend, with a simple wrapper around IPC events built-in. Exposed functions are always async (due to using IPC internally).
 
 <div class="glow" style="--glow-hue: 320">
-<div class="filename">node.js</div>
+<div class="filename node">index.js</div>
 
 ```js
-// In your Node backend
 import * as Gluon from '@gluon-framework/gluon';
 const Window = await Gluon.open('https://gluonjs.org');
 
@@ -44,11 +43,9 @@ Window.ipc.log = async msg => {
 <div style="margin-bottom: 40px"></div>
 
 <div class="glow" style="--glow-hue: 220">
-<div class="filename">site.js</div>
+<div class="filename site">site.js</div>
 
 ```js
-// In your website's JS
-
 // Get the config from the Node backend.
 const success = await Gluon.ipc.log('Message!');
 success // true
@@ -63,10 +60,9 @@ success // true
 Easily store common data between the Node backend and Web frontend in both directions. Values must be JSON serializable, and re-set to update the value.
 
 <div class="glow" style="--glow-hue: 320">
-<div class="filename">node.js</div>
+<div class="filename node">index.js</div>
 
 ```js
-// In your Node backend
 import * as Gluon from '@gluon-framework/gluon';
 const Window = await Gluon.open('https://gluonjs.org');
 
@@ -81,11 +77,9 @@ Window.ipc.store.config = {
 <div style="margin-bottom: 40px"></div>
 
 <div class="glow" style="--glow-hue: 220">
-<div class="filename">site.js</div>
+<div class="filename site">site.js</div>
 
 ```js
-// In your website's JS
-
 // Get the config using IPC Store
 const { config } = Gluon.ipc.store;
 config.env // 'production'
@@ -100,10 +94,9 @@ config.env // 'production'
 Gluon's IPC uses an asynchronous event-based system which you can also use. **It's recommended you use other sub-APIs where appropriate instead of using Events**, as they are easier to use for specific uses. The same example above would look like this using events instead.
 
 <div class="glow" style="--glow-hue: 320">
-<div class="filename">node.js</div>
+<div class="filename node">index.js</div>
 
 ```js
-// In your Node backend
 import * as Gluon from '@gluon-framework/gluon';
 const Window = await Gluon.open('https://gluonjs.org');
 
@@ -117,11 +110,9 @@ Window.ipc.on('get config', async () => JSON.parse(await readFile('config.json',
 <div style="margin-bottom: 40px"></div>
 
 <div class="glow" style="--glow-hue: 220">
-<div class="filename">site.js</div>
+<div class="filename site">site.js</div>
 
 ```js
-// In your website's JS
-
 // Get the config from the Node backend.
 const config = await Gluon.ipc.send('get config');
 ```

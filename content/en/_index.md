@@ -91,7 +91,7 @@ Opening a Window in Gluon is as simple as one function call, with more options a
 <div class="col-lg-7" style="float: right">
 
 <div class="glow" style="--glow-hue: 320">
-<div class="filename">index.js</div>
+<div class="filename node">index.js</div>
 
 ```js
 import * as Gluon from '@gluon-framework/gluon';
@@ -128,10 +128,9 @@ Share common data effortlessly between Node and Web both ways.
 <div class="col-lg-7" style="float: right">
 
 <div class="glow" style="--glow-hue: 320">
-<div class="filename">node.js</div>
+<div class="filename node">index.js</div>
 
 ```js
-// In your Node backend
 import * as Gluon from '@gluon-framework/gluon';
 const Window = await Gluon.open('https://gluonjs.org');
 
@@ -151,10 +150,9 @@ Window.ipc.log = msg => { // Log data to a log file on disk
 </div>
 
 <div class="glow" style="--glow-hue: 220">
-<div class="filename">site.js</div>
+<div class="filename site">site.js</div>
 
 ```js
-// In your website's JS
 // Get data from IPC Store
 const { env } = Gluon.ipc.store.config;
 env // 'production'
@@ -184,10 +182,9 @@ You can either hibernate, sleep, and wake up manually with the API, or use autom
 <div class="col-lg-7" style="float: right">
 
 <div class="glow" style="--glow-hue: 320">
-<div class="filename">index.js</div>
+<div class="filename node">index.js</div>
 
 ```js
-// In your Node backend
 import * as Gluon from '@gluon-framework/gluon';
 const Window = await Gluon.open('https://example.com');
 
