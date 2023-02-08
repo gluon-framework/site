@@ -39,7 +39,7 @@ table {
   max-width: calc(100% - 140px);
   height: 24px;
   border-radius: 6px;
-  background: #404448;
+  background: #e0e4e8;
 
   font-size: 0.8em;
   line-height: 24px;
@@ -49,6 +49,10 @@ table {
   margin: 0;
 
   display: inline-block;
+}
+
+[data-dark-mode] .chart > div > div {
+  background: #404448;
 }
 
 .chart > div > div.glow {
