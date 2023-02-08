@@ -97,6 +97,10 @@ code.language-mermaid {
   margin-bottom: 32px;
 }
 
+.content .glow {
+  box-shadow: 0 0.875px 3.45px hsla(var(--glow-hue), 60%, 70%, 0.07), 0 2.075px 8.325px hsla(var(--glow-hue), 60%, 70%, 0.101), 0 3.925px 15.65px hsla(var(--glow-hue), 60%, 70%, 0.125), 0 6.975px 27.925px hsla(var(--glow-hue), 60%, 70%, 0.149), 0 13.05px 52.225px hsla(var(--glow-hue), 60%, 70%, 0.18), 0 31.25px 125px hsla(var(--glow-hue), 60%, 70%, 0.25);
+}
+
 .glow pre, .glow p {
   margin: 0;
   font-size: 0.8rem;
