@@ -39,7 +39,7 @@ Window.ipc.myFunction = (...args) => {
 ```
 
 </div>
-<div style="margin-bottom: 60px"></div>s
+<div style="margin-bottom: 60px"></div>
 
 ## `ipc.expose(key, handler)`
 Function to expose a Node function to the Web frontend with a key and handler function.
@@ -207,4 +207,4 @@ Window.ipc.removeListener('my type', data => {
 ```
 
 </div>
-<div style="margin-bottom: 60px"></div>s
+<div style="margin-bottom: 60px"></div>

@@ -34,7 +34,7 @@ Window.versions.product
 ```
 
 </div>
-<div style="margin-bottom: 60px"></div>s
+<div style="margin-bottom: 60px"></div>
 
 ## `engine`
 Version information about the browser engine (Chromium/Firefox) in use. Firefox is referred to as using the "firefox" engine rather than Gecko as forks are based on Firefox directly instead of just Gecko.
@@ -68,4 +68,4 @@ Window.versions.jsEngine
 ```
 
 </div>
-<div style="margin-bottom: 60px"></div>s
+<div style="margin-bottom: 60px"></div>
