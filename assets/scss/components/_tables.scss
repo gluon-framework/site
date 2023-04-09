@@ -3,6 +3,13 @@ table {
 
   margin: 3rem 0;
   margin-bottom: 1rem;
+
+  --bs-table-bg: transparent !important;
+}
+
+td {
+  line-height: 24px;
+  vertical-align: middle;
 }
 
 .chart {
@@ -45,14 +52,46 @@ table {
   line-height: 24px;
   font-weight: 600;
   text-align: left;
-  padding: 0 6px;
+  padding: 0 8px;
   margin: 0;
 
   display: inline-block;
 }
 
+.chart.nopadding > div > div {
+  padding: 0;
+}
+
 [data-dark-mode] .chart > div > div {
   background: #404448;
+}
+
+#gluon-build-size::after {
+  content: "0.2MB";
+
+  color: hsl(320, 60%, 70%);
+  margin-left: 6px;
+}
+
+#tauri-build-size::after {
+  content: "1.7MB";
+
+  color: #dee2e6;
+  margin-left: 8px;
+}
+
+#neutralinojs-build-size::after {
+  content: "2.6MB";
+
+  color: #dee2e6;
+  margin-left: 10px;
+}
+
+#electron-build-size::after {
+  content: "220MB";
+
+  color: #dee2e6;
+  margin-left: 8px;
 }
 
 .chart > div > div.glow {

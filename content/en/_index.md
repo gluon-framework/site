@@ -76,9 +76,46 @@ Gluon is not only versatile, but also one of the fastest frameworks out there. B
 </div>
 </div>
 
+<small style="color: #a0a4a8; font-size: 0.6em">Time until FCP. Gluon using Chromium. All frameworks in release config, on Windows 10.</small>
 </div>
 
 <div style="margin-bottom: 60px; clear: both"></div>
+
+<div class="col-lg-8" style="float: left">
+
+## Tiny Builds
+
+Gluon has tiny builds thanks to a custom bootstrapper written in Nim, allowing dependencies (like Node) to only be downloaded on the fly when not already installed.
+
+</div>
+
+<div class="col-lg-7" style="float: right">
+
+<div class="chart nopadding">
+<span>Build Size <small style="margin-left: 6px; font-size: 0.6em">Windows x64</small></span>
+<div>
+<span>Gluon <div title="Experimental" class="icon-experimental" style="vertical-align: revert; position: relative; top: 1px; left: 2px; --size: 15px; color: #a0a4a8"></div></span>
+<!-- <div class="glow" id="gluon-build-size" style="--glow-hue: 320; width: calc((100% - 140px) * (0.25 / 2.6))"></div> -->
+<div class="glow" id="gluon-build-size" style="--glow-hue: 320; width: calc((100% - 140px) * (0.2 / 220))"></div>
+</div>
+<div>
+<span>Tauri</span>
+<div id="tauri-build-size" style="width: calc((100% - 140px) * (1.7 / 220))"></div>
+</div>
+<div>
+<span>Neutralinojs</span>
+<div id="neutralinojs-build-size" style="width: calc((100% - 140px) * (2.6 / 220))"></div>
+</div>
+<div>
+<span>Electron</span>
+<div id="electron-build-size" style="width: calc((100% - 140px) * (220 / 220))"></div>
+</div>
+</div>
+
+</div>
+
+<div style="margin-bottom: 60px; clear: both"></div>
+
 
 <div class="col-lg-8" style="float: left">
 
@@ -208,6 +245,56 @@ Window.idle.wake(); // Wake it up again
 </div>
 
 <div style="margin-bottom: 48px; clear: both"></div>
+
+<div class="col-lg-7" style="float: left">
+
+## Also featuring...
+
+### Browser Extensions
+
+Gluon also features best-in-class browser extension support:
+
+| Extension Feature | <span style="font-weight: 900; color: #c2a2df">Gluon</span> | <span style="font-weight: 600">Electron</span> | <span style="font-weight: 600">Tauri</span> |
+| ---- | :---: | :------: | :---: |
+| Extension Support<br><small style="color: #a0a4a8; font-size: 0.8em">Basic browser extension support</small> | 🟢 | 🟢 | 🔴 |
+| DevTools Extensions<br><small style="color: #a0a4a8; font-size: 0.8em">DevTools extensions like React DevTools work</small> | 🟢 | 🟢 | 🔴 |
+| Manifest V2<br><small style="color: #a0a4a8; font-size: 0.8em">Support for Manifest V2</small> | 🟢 | 🟢 | 🔴 |
+| Manifest V3<br><small style="color: #a0a4a8; font-size: 0.8em">Support for Manifest V3 (new format/APIs)</small> | 🟢 | 🔴 | 🔴 |
+| WebExtension APIs Support<br><small style="color: #a0a4a8; font-size: 0.8em">Broad support for various WebExtension APIs</small> | 🟢 | 🟡 | 🔴 |
+
+<small style="color: #a0a4a8; font-size: 0.8em; display: flex; gap: 16px">
+<span>🟢 Supported</span>
+<span>🟡 Partial</span>
+<span>🔴 Unsupported</span>
+</small>
+
+</div>
+
+<div class="col-lg-7" style="float: right">
+
+## &nbsp;
+
+### Security in Mind
+
+Gluon has strict security, by default, without developer annoyance:
+
+| Extension Feature | <span style="font-weight: 900; color: #c2a2df">Gluon</span> | <span style="font-weight: 600">Electron</span> | <span style="font-weight: 600">Tauri</span> |
+| ---- | :---: | :------: | :---: |
+| Process Isolation<br><small style="color: #a0a4a8; font-size: 0.8em">Isolate and sandbox processes for enhanced security</small> | 🟢 | 🟢 | 🟢 |
+| No localhost Server<br><small style="color: #a0a4a8; font-size: 0.8em">Do not use a localhost server which could be exposed</small> | 🟢 | 🟢 | 🟢 |
+| Content Security Policy<br><small style="color: #a0a4a8; font-size: 0.8em">Use a CSP to stop unwanted external content</small> | 🟢 | 🟡 | 🟡 |
+| Limited Navigations<br><small style="color: #a0a4a8; font-size: 0.8em">Prevent navigation to untrusted origins</small> | 🟢 | 🟡 | 🔴 |
+| HTTPS Only<br><small style="color: #a0a4a8; font-size: 0.8em">Only accept HTTPS URLs and content</small> | 🟢 | 🔴 | 🔴 |
+
+<small style="color: #a0a4a8; font-size: 0.8em; display: flex; gap: 16px">
+<span>🟢 Default</span>
+<span>🟡 Opt-in</span>
+<span>🔴 Unimplemented</span>
+</small>
+
+</div>
+
+<div style="margin-bottom: 120px; clear: both"></div>
 
 <div class="glow rainbow">
 
