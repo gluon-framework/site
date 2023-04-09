@@ -30,6 +30,7 @@ Existing frameworks either bundle Chromium (Electron) or use WebView2/WebKitGTK 
 
 - Don't have to rely on system installed libraries
 - Fully open source (WebView2 is closed source)
+- More features supported (browser extensions, etc)
 - Don't have to worry about using other libraries on non-Windows
 - More freedom/choice for developers and users (not locked into one ecosystem/library/engine)
 
