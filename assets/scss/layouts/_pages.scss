@@ -110,6 +110,12 @@ p.meta {
   }
 }
 
+@media (max-width: 600px) {
+  .doks-search {
+    display: none !important;
+  }
+}
+
 body {
   padding-right: 0 !important;
 }
@@ -149,4 +155,8 @@ nav .position-relative, .nav:nth-last-child(2) {
 h1 > code, h2 > code, h3 > code, h4 > code {
   font-size: unset;
   font-weight: unset;
+}
+
+body .doks-search {
+  top: 2px;
 }

@@ -1,6 +1,6 @@
 ---
 title: "IPC"
-description: ""
+description: "The IPC Window API (Window.ipc)"
 lead: ""
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
@@ -8,7 +8,7 @@ draft: false
 images: []
 menu:
   docs:
-    parent: "gluon api"
+    parent: "window api"
 weight: 301
 toc: true
 ---

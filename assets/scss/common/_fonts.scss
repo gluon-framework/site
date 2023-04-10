@@ -2,7 +2,7 @@
 
 h1, h2, h3, h4, h5,
 header {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
 }
 
 .nav-item {
@@ -16,6 +16,7 @@ header {
 .navbar-brand {
   position: relative;
   top: -2px;
+  min-width: 100px;
 }
 
 .navbar-brand > img + span {

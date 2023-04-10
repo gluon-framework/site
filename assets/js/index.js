@@ -69,9 +69,9 @@ Source:
     document: {
       id: 'id',
       store: [
-        "href", "title", "description"
+        "href", "title", "description", "parent"
       ],
-      index: ["title", "description", "content"]
+      index: ["title", "description", "content", "parent"]
     }
   });
 
@@ -111,11 +111,13 @@ Source:
   {{ $len := (len $list) -}}
 
   {{ range $index, $element := $list -}}
+    {{ if ne .Plain "" }}
     index.add(
       {
         id: {{ $index }},
         href: "{{ .RelPermalink }}",
         title: {{ .Title | jsonify }},
+        parent: {{ .Parent.Title | jsonify }},
         {{ with .Description -}}
           description: {{ . | jsonify }},
         {{ else -}}
@@ -124,6 +126,7 @@ Source:
         content: {{ .Plain | jsonify }}
       }
     );
+    {{ end }}
   {{ end -}}
 
   search.addEventListener('input', show_results, true);
@@ -136,6 +139,7 @@ Source:
     // flatten results since index.search() returns results for each indexed field
     const flatResults = new Map(); // keyed by href to dedupe results
     for (const result of results.flatMap(r => r.result)) {
+      if (result.doc.parent === 'Docs') continue;
       if (flatResults.has(result.doc.href)) continue;
       flatResults.set(result.doc.href, result.doc);
     }
@@ -153,27 +157,32 @@ Source:
     }
 
     // construct a list of suggestions
-    for(const [href, doc] of flatResults) {
-        const entry = document.createElement('div');
-        suggestions.appendChild(entry);
+    for (const [href, doc] of flatResults) {
+      const entry = document.createElement('div');
+      suggestions.appendChild(entry);
 
-        const a = document.createElement('a');
-        a.href = href;
-        entry.appendChild(a);
+      const a = document.createElement('a');
+      a.href = href;
+      entry.appendChild(a);
 
-        const title = document.createElement('span');
-        title.textContent = doc.title;
-        title.classList.add("suggestion__title");
-        a.appendChild(title);
+      const parent = document.createElement('span');
+      parent.textContent = doc.parent;
+      parent.classList.add("suggestion__parent");
 
-        const description = document.createElement('span');
-        description.textContent = doc.description;
-        description.classList.add("suggestion__description");
-        a.appendChild(description);
+      const title = document.createElement('span');
+      title.textContent = doc.title;
+      title.classList.add("suggestion__title");
+      a.appendChild(title);
+      title.prepend(parent);
 
-        suggestions.appendChild(entry);
+      const description = document.createElement('span');
+      description.textContent = doc.description.length > 46 ? doc.description.slice(0, 46) + '...' : doc.description;
+      description.classList.add("suggestion__description");
+      a.appendChild(description);
 
-        if(suggestions.childElementCount == maxResult) break;
+      suggestions.appendChild(entry);
+
+      if(suggestions.childElementCount == maxResult) break;
     }
   }
 }());

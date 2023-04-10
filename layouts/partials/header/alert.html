@@ -2,32 +2,32 @@
   <div class="alert alert-primary text-lg-center" role="alert">
     {{ .Site.Params.alertText | safeHTML }}
   </div>
+
+  <script> (async () => {
+    const prettyAgo = (timestamp) => {
+      const intervals = [
+        { label: 'year', seconds: 31536000 },
+        { label: 'month', seconds: 2592000 },
+        { label: 'week', seconds: 604800 },
+        { label: 'day', seconds: 86400 },
+        { label: 'hour', seconds: 3600 },
+        { label: 'minute', seconds: 60 },
+        { label: 'second', seconds: 1 }
+      ];
+
+      const seconds = Math.floor((Date.now() - timestamp) / 1000);
+      const interval = intervals.find(i => i.seconds <= seconds) ?? intervals[intervals.length - 1];
+      const count = Math.floor(seconds / interval.seconds);
+
+      const rtf = new Intl.RelativeTimeFormat("en", {
+        localeMatcher: 'best fit',
+        numeric: 'auto',
+        style: 'long'
+      });
+
+      return rtf.format(count * -1, interval.label);
+    };
+
+    release_when.textContent = prettyAgo(new Date('2023-02-08T18:10:00'));
+  })();</script>
 {{ end }}
-
-<script> (async () => {
-  const prettyAgo = (timestamp) => {
-    const intervals = [
-      { label: 'year', seconds: 31536000 },
-      { label: 'month', seconds: 2592000 },
-      { label: 'week', seconds: 604800 },
-      { label: 'day', seconds: 86400 },
-      { label: 'hour', seconds: 3600 },
-      { label: 'minute', seconds: 60 },
-      { label: 'second', seconds: 1 }
-    ];
-
-    const seconds = Math.floor((Date.now() - timestamp) / 1000);
-    const interval = intervals.find(i => i.seconds <= seconds) ?? intervals[intervals.length - 1];
-    const count = Math.floor(seconds / interval.seconds);
-
-    const rtf = new Intl.RelativeTimeFormat("en", {
-      localeMatcher: 'best fit',
-      numeric: 'auto',
-      style: 'long'
-    });
-
-    return rtf.format(count * -1, interval.label);
-  };
-
-  release_when.textContent = prettyAgo(new Date('2023-02-08T18:10:00'));
-})();</script>

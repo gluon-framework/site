@@ -1,6 +1,6 @@
 ---
 title: "Idle"
-description: ""
+description: "The Idle Window API (Window.idle)"
 lead: ""
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
@@ -8,7 +8,7 @@ draft: false
 images: []
 menu:
   docs:
-    parent: "gluon api"
+    parent: "window api"
 weight: 309
 toc: true
 chrome: true

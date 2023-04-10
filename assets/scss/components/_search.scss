@@ -5,7 +5,6 @@
 #suggestions {
   position: absolute;
   right: 0;
-  margin-top: 0.5rem;
   width: calc(100vw - 3rem);
   max-width: calc(400px - 3rem);
   z-index: $zindex-dropdown;
@@ -17,12 +16,13 @@
   @include media-breakpoint-up(lg) {
     right: 0;
   }
+
+  background: #1b1f22;
 }
 
 #suggestions a,
 .suggestion__no-results {
-  padding: 0.75rem;
-  margin: 0 0.5rem;
+  padding: 0.75rem 1.25rem;
 }
 
 #suggestions a {
@@ -36,19 +36,15 @@
 }
 
 #suggestions div:not(:first-child) {
-  border-top: 1px dashed $gray-200;
+  border-top: 1px solid #404448;
 }
 
 #suggestions div:first-child {
   margin-top: 0.5rem;
 }
 
-#suggestions div:last-child {
-  margin-bottom: 0.5rem;
-}
-
-#suggestions a:hover {
-  background: $gray-100;
+#suggestions div:hover {
+  background: #202428;
 }
 
 #suggestions span {
@@ -58,18 +54,35 @@
 
 .suggestion__title {
   font-weight: $headings-font-weight;
-  color: $black;
+  color: #fff;
+}
+
+.suggestion__parent {
+  font-weight: 500;
+  color: #a0a4a8;
+  font-size: 0.9em !important;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.suggestion__description {
+  flex-grow: 1;
+}
+
+.suggestion__parent::after {
+  margin: 0 0.2rem;
+  content: ">";
 }
 
 .suggestion__description,
 .suggestion__no-results {
-  color: $gray-700;
+  color: #dee2e6;
 }
 
 @include media-breakpoint-up(lg) {
   #suggestions {
-    width: 31.125rem;
-    max-width: 31.125rem;
+    width: 40rem;
+    max-width: 40rem;
   }
 
   #suggestions a {
@@ -77,15 +90,7 @@
   }
 
   .suggestion__title {
-    width: 9rem;
-    padding-right: 1rem;
-    border-right: 1px solid $gray-200;
+    width: 14rem;
     display: inline-block;
-    text-align: right;
-  }
-
-  .suggestion__description {
-    width: 19rem;
-    padding-left: 1rem;
   }
 }
