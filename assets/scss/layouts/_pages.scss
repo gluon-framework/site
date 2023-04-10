@@ -76,6 +76,10 @@ p.meta {
     width: calc(100% + var(--bs-gutter-x) * 2);
     transform: translateX(calc(var(--bs-gutter-x) * -1));
   }
+
+  .cross-diagram > div {
+    flex-basis: 80%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -110,7 +114,7 @@ p.meta {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .doks-search {
     display: none !important;
   }
