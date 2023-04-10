@@ -225,17 +225,17 @@ You can either hibernate, sleep, and wake up manually with the API, or use autom
 import * as Gluon from '@gluon-framework/gluon';
 const Window = await Gluon.open('https://example.com');
 
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-await sleep(5000); // Wait for the window to fully load
+const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+await wait(5000); // Wait for everything to fully load
 
 Window.idle.hibernate(); // Hibernate the window
-await sleep(5000);
+await wait(5000);
 
 Window.idle.wake(); // Wake up the window
-await sleep(5000);
+await wait(5000);
 
 Window.idle.sleep(); // Put the window to sleep
-await sleep(5000);
+await wait(5000);
 
 Window.idle.wake(); // Wake it up again
 ```
