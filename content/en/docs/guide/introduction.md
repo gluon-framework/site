@@ -34,6 +34,11 @@ Existing frameworks either bundle Chromium (Electron) or use WebView2/WebKitGTK 
 - Don't have to worry about using other libraries on non-Windows
 - More freedom/choice for developers and users (not locked into one ecosystem/library/engine)
 
+### Advantages over Webkit2GTK
+
+- Don't have to rely on system installed libraries
+- DRM content playback in Chrome/Chromium or Firefox (Webkit2GTK does not support Widevine)
+
 <br>
 
 ### Disadvantages over bundling
